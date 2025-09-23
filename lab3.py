@@ -31,6 +31,10 @@ while True:
         if not student_magazine:
             print("Список студентів порожній.")
         else:
+            excellent = []
+            good = []
+            struggling = []
+            failed = []
             for name in student_magazine:
                 mark = student_magazine[name]
                 if 10 <= mark <= 12:
@@ -50,4 +54,5 @@ while True:
         break
     else:
         print("Ви ввели неправильну дію. Спробуйте ще раз")
+
 
