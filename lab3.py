@@ -31,10 +31,16 @@ while True:
         if not student_magazine:
             print("Список студентів порожній.")
         else:
-            excellent = [name for name, mark in student_magazine.items() if 10 <= mark <= 12]
-            good = [name for name, mark in student_magazine.items() if 7 <= mark <= 9]
-            struggling = [name for name, mark in student_magazine.items() if 4 <= mark <= 6]
-            failed = [name for name, mark in student_magazine.items() if 1 <= mark <= 3]
+            for name in student_magazine:
+                mark = student_magazine[name]
+                if 10 <= mark <= 12:
+                    excellent.append(name)
+                elif 7 <= mark <= 9:
+                    good.append(name)
+                elif 4 <= mark <= 6:
+                    struggling.append(name)
+                elif 1 <= mark <= 3:
+                    failed.append(name)
             print(f"Відмінники (10-12): {len(excellent)} ( {', '.join(excellent)})")
             print(f"Хорошисти (7-9): {len(good)} ( {', '.join(good)})")
             print(f"Відстаючі (4-6): {len( struggling)} ( {', '.join( struggling) })")
@@ -44,3 +50,4 @@ while True:
         break
     else:
         print("Ви ввели неправильну дію. Спробуйте ще раз")
+
