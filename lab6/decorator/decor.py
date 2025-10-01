@@ -6,6 +6,6 @@ def check_type(func):
         first_type = type(values[0])
         for value in values:
             if type(value) is not first_type:
-                return f"Аргументи мають бути одного типу"   
+                return "Аргументи мають бути одного типу"   
         return func(*args, **kwargs)
     return wrapper
