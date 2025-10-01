@@ -1,9 +1,9 @@
 from decorator.decor import check_type
-def main():
 
-  @check_type
-  def add(a, b):
-      return a + b
+@check_type
+def add(a, b):
+   return a + b
+def main:
 
   print(add(3, 5))      
   print(add("Hello ", True)) 
